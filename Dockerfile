@@ -8,7 +8,7 @@ COPY . /go/src/github/wsdemo
 WORKDIR /go/src/github/wsdemo
 
 RUN go build wsdemo.go
-RUN mv ./wsdemo /usr/local/wsdemo/
+RUN mv ./wsdemo /usr/local/wsdemo/wsdemo
 
 EXPOSE 7777
 
