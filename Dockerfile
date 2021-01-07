@@ -8,7 +8,8 @@ COPY . /go/src/github/wsdemo
 WORKDIR /go/src/github/wsdemo
 
 RUN GOPROXY=https://goproxy.cn go build -o wsdemo wsdemo.go
-FROM debian COPY /go/src/github/wsdemo/wsdemo .
+FROM debian 
+COPY --from=build /go/src/github/wsdemo/wsdemo .
 
 EXPOSE 7777
 
