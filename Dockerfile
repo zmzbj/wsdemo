@@ -7,7 +7,7 @@ RUN mkdir -p /go/src/github/wsdemo
 COPY . /go/src/github/wsdemo
 WORKDIR /go/src/github/wsdemo
 
-RUN go build wsdemo.go
+RUN GOPROXY=https://goproxy.cn go build wsdemo.go
 RUN mv ./wsdemo /usr/local/wsdemo/wsdemo
 
 EXPOSE 7777
